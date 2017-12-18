@@ -1,0 +1,21 @@
+{
+  "name": "liri-node-app",
+  "version": "0.0.1",
+  "description": "Language Interpretation and Recognition Interface, CWRU Coding Bootcamp week 10 homework assignment",
+  "main": "liri.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcocherell/liri-node-app"
+  },
+  "author": "Brian Cocherell",
+  "bugs": {
+    "url": "https://github.com/bcocherell/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/bcocherell/liri-node-app#readme",
+  "dependencies": {
+    "twitter": "latest",
+    "node-spotify-api": "latest",
+    "request": "latest"
+  }
+}
