@@ -11,6 +11,6 @@ var spotifyKeys = {
 };
 
 module.exports = {
-	twitterKeys: twitterKeys,
-	spotifyKeys: spotifyKeys
+  twitterKeys: twitterKeys,
+  spotifyKeys: spotifyKeys
 };
