@@ -35,7 +35,6 @@ switch(process.argv[2]) {
 
     fs.readFile('random.txt', 'utf8', function(error, data) {
 
-      // If the code experiences any errors it will log the error to the console.
       if (!error) {
         var dataArr = data.split(',');
 
