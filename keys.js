@@ -1,16 +1,11 @@
-var twitterKeys = {
-  consumer_key: 'OUEHfaER0Unt1qPJ0liRqEYci',
-  consumer_secret: 'QdkmxgzgUOBi2nMjqTV7puYAKg5N4r1PFQWiqFzlkSDJ9Ew2cT',
-  access_token_key: '942099628530520064-cFQNVF5sfksbwDS8SXPOCkKdFDRvOXY',
-  access_token_secret: 'Lxcqf3cOjwYJPDTbZ2vOYKRmcTJRPEn5ZuGKlstg2DCBh',
-}
-
-var spotifyKeys = {
-  id: '8ecd76584f714e78b22ec8c0a24800ec',
-  secret: '3776a20a59634cccb9caf1ad80104881'
+exports.twitter = {
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 };
 
-module.exports = {
-  twitterKeys: twitterKeys,
-  spotifyKeys: spotifyKeys
+exports.spotify = {
+  id: process.env.SPOTIFY_ID,
+  secret: process.env.SPOTIFY_SECRET
 };

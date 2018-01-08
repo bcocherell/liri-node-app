@@ -16,6 +16,7 @@
   "dependencies": {
     "twitter": "latest",
     "node-spotify-api": "latest",
-    "request": "latest"
+    "request": "latest",
+    "dotenv": "latest"
   }
 }

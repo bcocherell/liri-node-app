@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 var fs = require("fs");
 var keys = require("./keys.js");
 var logFile = 'log.txt';
@@ -9,7 +11,7 @@ if (process.argv[2]) {
 }
 
 if (process.argv[3]) {
-  command += ' ' + process.argv[2];
+  command += " '" + process.argv[3] + "'";
 }
 
 fs.appendFile(logFile, '\n' + command + '\n', function(error) {
@@ -70,7 +72,7 @@ switch(process.argv[2]) {
 function listTweets() {
   var Twitter = require('twitter');
 
-  var client = new Twitter(keys.twitterKeys);
+  var client = new Twitter(keys.twitter);
 
   var params = {
     user_id: '942099628530520064',
@@ -104,7 +106,7 @@ function spotifySong(song) {
 
   var Spotify = require('node-spotify-api');
 
-  var spotify = new Spotify(keys.spotifyKeys);
+  var spotify = new Spotify(keys.spotify);
 
   var params = {
     type: 'track',
