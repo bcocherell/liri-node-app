@@ -4,8 +4,8 @@ var fs = require("fs");
 var keys = require("./keys.js");
 var logFile = 'log.txt';
 var command = '$ node liri.js'
-// log command issued
 
+// log command issued
 if (process.argv[2]) {
   command += ' ' + process.argv[2];
 }
@@ -20,21 +20,26 @@ fs.appendFile(logFile, '\n' + command + '\n', function(error) {
   }
 });
 
+// determine what user wants
 switch(process.argv[2]) {
   case 'my-tweets':
+    // returns info about last 20 tweets (@brian_cwru)
     listTweets();
     break;
 
   case 'spotify-this-song':
+    // returns info about song requested from spotify
     spotifySong(process.argv[3]);
     break;
 
   case 'movie-this':
+    // returns info about movie requested from omdb api
     searchOMDB(process.argv[3]);
     break;
 
   case 'do-what-it-says':
 
+    // takes the text inside of random.txt and then uses it to call a command
     fs.readFile('random.txt', 'utf8', function(error, data) {
 
       if (!error) {
@@ -99,7 +104,9 @@ function listTweets() {
 }
 
 function spotifySong(song) {
+  // returning top 10 results from spotify track search
   // defaults song to 'the sign' by ace of base
+
   if (!song){
     song = 'the sign';
   }
@@ -158,6 +165,9 @@ function spotifySong(song) {
 
 function searchOMDB(movie) {
 
+  // returning info about movie requested from omdb api
+  // defaults to 'Mr. Nobody'
+
   if (!movie){
     movie = 'Mr. Nobody';
   }
@@ -202,6 +212,9 @@ function searchOMDB(movie) {
 }
 
 function logEvent(log) {
+
+  // logs event to console as well as log.txt
+
   console.log(log);
   fs.appendFile(logFile, log + '\n', function(error) {
     if (error) {
